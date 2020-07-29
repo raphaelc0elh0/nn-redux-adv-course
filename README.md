@@ -2,7 +2,7 @@
 In the middle of the lesson I was getting an error:
 
 ```
-TypeError: Object(...)
+TypeError: Object(...) is not a function
 ```
 After some googling, found out that the firebase/firestore code was updated and it broke the code we were writing with the course.
 So I read the official API reference docs, which you can find here https://react-redux-firebase.com/docs/api/, and made some changes to our code based on them.
