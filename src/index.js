@@ -31,10 +31,12 @@ const app = (
     <Provider store={store}>
       <ReactReduxFirebaseProvider
         firebase={firebase}
-        config={{}}
+        config={{ userProfile: 'users', useFirestoreForProfile: true }}
         dispatch={store.dispatch}
         createFirestoreInstance={createFirestoreInstance}>
-        <AuthIsLoaded><App /></AuthIsLoaded>
+        <AuthIsLoaded>
+          <App />
+        </AuthIsLoaded>
       </ReactReduxFirebaseProvider>
     </Provider>
   </React.StrictMode>
@@ -46,3 +48,4 @@ ReactDOM.render(app, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
